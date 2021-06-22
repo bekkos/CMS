@@ -1,0 +1,18 @@
+{% extends "general.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+{% include "nav.html" %}
+<div class="wrapper">
+    <h1>Velg hvilken side du vil redigere</h1>
+    <br><br>
+    {% include "application-list.html" %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/page-select.js') }}"></script>
+</div>
+
+
+{% endblock %}

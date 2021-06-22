@@ -1,0 +1,25 @@
+{% extends "general.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/edit.css') }}">
+{% endblock %}
+
+{% block body %}
+{% include "nav.html" %}
+<div class="wrapper">
+    <button class="btn btn-danger" onclick="back();">Tilbake</button>
+    <br>
+    <textarea class="form-control" name="" id="editArea" >
+        {% if data %}
+        {{data}}
+        {% endif %}
+    </textarea>
+    <br>
+    <button class="btn btn-success" onclick="submit();">Lagre endringer</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/edit.js') }}"></script>
+</div>
+
+
+{% endblock %}

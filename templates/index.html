@@ -1,0 +1,23 @@
+{% extends 'general.html' %}
+
+{% block head %}
+    <title>CDN - Wackerfeatures</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block body %}
+    <form action="#" method="post">
+        <h2>Logg inn</h2>
+        <label for="email">E-Post</label>
+        <input type="email" id="email" name="email" class="form-control">
+        <label for="password">Passord</label>
+        <input type="password" id="password" name="password" class="form-control">
+        {% if message %}
+            <p>{{ message }}</p>
+            {% else %}
+            <br>
+        {% endif %}
+        <button class="btn btn-success">Logg inn</button>
+        
+    </form>
+{% endblock %}

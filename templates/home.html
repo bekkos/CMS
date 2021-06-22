@@ -1,0 +1,21 @@
+{% extends "general.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+{% include "nav.html" %}
+<div class="wrapper">
+    <h1>Velg hvilken applikasjon du vil redigere</h1>
+    <br><br>
+    {% include "application-list.html" %}
+    {% if message %}
+            <p>{{ message }}</p>
+    {% endif %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/home-logic.js') }}"></script>
+</div>
+
+
+{% endblock %}
