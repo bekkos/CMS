@@ -48,7 +48,7 @@ function refreshList(mode, id) {
             }
         });
     } else if (mode == 2) {
-        url = "/elements?id=";
+        url = "/elements?id="+id;
         $.get(url, (data) => {
             let row = "";
             let index = 1;
