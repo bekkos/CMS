@@ -1,0 +1,22 @@
+.wrapper {
+    width: 80%;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#editArea {
+    width:100%;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    display: block;
+    align-self: flex-start;
+}
